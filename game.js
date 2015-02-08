@@ -47,17 +47,17 @@ User.prototype.json = function() {
     }
 };
 
-function resetToState(state) {
+function resetToState(newState) {
     // resets to state
     // emits state to users
-    if (state === STATE_DEFAULT) {
+    if (newState === STATE_DEFAULT) {
         state.state = STATE_DEFAULT;
 
-    } else if (state === STATE_QUESTIONING) {
+    } else if (newState === STATE_QUESTIONING) {
         state.state = STATE_QUESTIONING
         state.currentUser = undefined;
 
-    } else if (state === STATE_BUZZED_IN) {
+    } else if (newState === STATE_BUZZED_IN) {
         state.state = STATE_BUZZED_IN;
     }
 }
@@ -160,8 +160,11 @@ module.exports = {
                 // and set the state back to questioning
                 state.state = STATE_QUESTIONING;
                 io.to(state.currentUser.socket.id).emit('wrong answer');
-                user.canQuestion = false;
-                return;
+                state.currentUser.canQuestion = false;
+                return {
+                    state: state.state,
+                    currentUser: state.currentUser.json()
+                };
             }
 
             // answer was correct
@@ -177,7 +180,7 @@ module.exports = {
             });
 
             resetToState(STATE_DEFAULT);
-
+            debugger;
             return {
                 state: state.state,
                 currentUser: state.currentUser.json()
