@@ -41,7 +41,9 @@ $(document).ready(function() {
     var socket = io();
 
     socket.on('choose answer', function(state) {
-
+        if (state === null) {
+            return;
+        }
         answer = state.answer;
         console.log(state);
         // someone chose an answer, so flip that card over
