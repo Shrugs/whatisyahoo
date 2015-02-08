@@ -3,14 +3,14 @@
 module.exports = {
     random1: [
         {
-            answer: 'This is the first computers answer.',
+            answer: 'Why are you eating dirt?',
             questions: {
-                A: 'Option A',
-                B: 'Option B',
-                C: 'Option C',
-                D: 'Option D'
+                A: 'Why does dirt taste bad?',
+                B: 'can huemans live on dirt.',
+                C: 'does dirt have protien',
+                D: 'Why does my arm shake and turn bright red when im eating dirt.'
             },
-            correct: 'A',
+            correct: 'D',
             wasSolved: false
         },
         {
@@ -50,58 +50,58 @@ module.exports = {
     ],
     random2: [
         {
-            answer: 'This is the first history answer.',
+            answer: 'This part: ACGATCGACGACTACGAGACTACGATCAGCTACGACTACAGCATCAGCATAGCATAGCATCCGATCGCTAGCTACGATCAGCTACGATCAGCTACGATCGACTAGCATCGACATCAGCTAGCATCAGATCGATCATCGCGCGCGCATATCAATCATCAGCATAGCTAGCATCGACTAGCATCAGCAGAGCATCATCTACATATCATCATCATCAG',
             questions: {
-                A: 'Option A',
-                B: 'Option B',
-                C: 'Option C',
-                D: 'Option D'
+                A: 'What part of my cats DNA stops it from growing to the size of a big cat?',
+                B: 'what does human dna look like?',
+                C: 'how is dna',
+                D: 'who is the dna part'
             },
             correct: 'A',
             wasSolved: false
         },
         {
-            answer: 'This is the second history answer.',
+            answer: 'Totally. You can do it even while charging your vehicle (as long as it runs on normal unleaded gasoline).',
             questions: {
-                A: 'Option A',
-                B: 'Option B',
-                C: 'Option C',
-                D: 'Option D'
+                A: 'Can you push a car?',
+                B: 'Can I charfe my car',
+                C: 'Can you power your car with human of animal poop.',
+                D: 'how does car charge and can i use it while'
             },
-            correct: 'A',
+            correct: 'C',
             wasSolved: false
         },
         {
-            answer: 'This is the third history answer.',
+            answer: 'When youre no longer drunk you can cause the alcohol is out your sysstem its true i researchd it',
             questions: {
-                A: 'Option A',
-                B: 'Option B',
-                C: 'Option C',
-                D: 'Option D'
+                A: 'can you climb a ladder when drunk',
+                B: 'Whill babby get drunk if breast feed while drunk?',
+                C: 'how long does it take to not be drunk and run',
+                D: 'how can I talk to my ex when im drunk?'
             },
-            correct: 'A',
+            correct: 'B',
             wasSolved: false
         },
         {
-            answer: 'This is the fourth history answer.',
+            answer: 'Yes, most boys get theirs when they turn 18.',
             questions: {
-                A: 'Option A',
-                B: 'Option B',
-                C: 'Option C',
-                D: 'Option D'
+                A: 'When will I get my own fedora?',
+                B: 'When will I have my first period? im 17 and my sister is 14 and she got hers. Is it cause im boy?',
+                C: 'when is it normal to get a job',
+                D: 'is it ok to not have a car yet. im a 16 boy.'
             },
-            correct: 'A',
+            correct: 'B',
             wasSolved: false
         }
     ],
     random3: [
         {
-            answer: 'This is the first random answer.',
+            answer: 'There are jobs all the live long day.',
             questions: {
-                A: 'Option A',
-                B: 'Option B',
-                C: 'Option C',
-                D: 'Option D'
+                A: 'are there interesting summer jobs for people on the railroad',
+                B: 'how many jobs are there',
+                C: 'how long are normal jobs',
+                D: 'do I have to get a job wen I\'m 18 or can i wait?'
             },
             correct: 'A',
             wasSolved: false
@@ -112,20 +112,20 @@ module.exports = {
                 A: 'How do I cure genital warts?',
                 B: 'How can I be young again?',
                 C: 'Is it possible to get more dumb?',
-                D: 'How do I turn off capslock?'
+                D: 'HOW DO I TURN OFF CAPSLOCK'
             },
             correct: 'D',
             wasSolved: false
         },
         {
-            answer: 'This is the third random answer.',
+            answer: 'Not WWII. This actually happened right after the Pilgrims came to America. They took over the land and forced the Native Americans to participate. That\'s why pocahontas is so famous cause she won the first one.',
             questions: {
-                A: 'Option A',
-                B: 'Option B',
-                C: 'Option C',
+                A: 'Did chariot battles start after WWII?',
+                B: 'Is the hunger games based on a true story?',
+                C: 'How did the founding fathers win the battle against england after WWII.',
                 D: 'Option D'
             },
-            correct: 'A',
+            correct: 'B',
             wasSolved: false
         },
         {

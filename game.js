@@ -3,7 +3,7 @@ var io;
 
 
 // CONSTS
-var ANSWER_TIMER = 10000; // 5 seconds to answer
+var ANSWER_TIMER = 15000; // 15 seconds to answer
 
 // GAME STATE
 var users = [];
@@ -108,7 +108,14 @@ module.exports = {
         buzzIn: function(userId) {
             var user = _.findWhere(users, {id: userId})
 
-            if (state.state === STATE_BUZZED_IN || !user.canQuestion) {
+            var peopleAllowedToBuzzIn = 0;
+            _.each(users, function(user) {
+                peopleAllowedToBuzzIn += user.canQuestion ? 1 : 0;
+            });
+
+            debugger;
+
+            if (state.state === STATE_BUZZED_IN || (!user.canQuestion) ) {
                 // if someone has already buzzed in, don't do anything
                 // or they already tried to answer
                 io.to(user.socket.id).emit('buzz in', {
@@ -180,7 +187,6 @@ module.exports = {
             });
 
             resetToState(STATE_DEFAULT);
-            debugger;
             return {
                 state: state.state,
                 currentUser: state.currentUser.json()
