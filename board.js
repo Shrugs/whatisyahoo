@@ -129,58 +129,58 @@ module.exports = {
             wasSolved: false
         },
         {
-            answer: 'This is the fourth random answer.',
+            answer: 'Absolutely! Don\'t do it!',
             questions: {
-                A: 'Option A',
-                B: 'Option B',
-                C: 'Option C',
-                D: 'Option D'
+                A: 'Is it bad to ask my gf her weight?',
+                B: 'is it bad to fart in church?',
+                C: 'Is eating a gingerbreadman considered cannabilsm?',
+                D: 'is pooping my pants bad'
             },
-            correct: 'A',
+            correct: 'C',
             wasSolved: false
         }
     ],
     random4: [
         {
-            answer: 'This is the first animals answer.',
+            answer: 'Yes... just like how people eat gingerbread men. =)',
             questions: {
-                A: 'Option A',
-                B: 'Option B',
-                C: 'Option C',
-                D: 'Option D'
+                A: 'Do vegetarians eat animal crackers...?',
+                B: 'Do bears eat gumi bears...?',
+                C: 'Do animals eat other animals...?',
+                D: 'Can a dog eat human food...?'
             },
-            correct: 'A',
+            correct: 'B',
             wasSolved: false
         },
         {
-            answer: 'This is the second animals answer.',
+            answer: 'As long as you burn the shed and check for fleas, your chance is nearly 0.',
             questions: {
-                A: 'Option A',
-                B: 'Option B',
-                C: 'Option C',
-                D: 'Option D'
+                A: 'I have a small rat problem?',
+                B: 'Will I be cursed if I build my house on this old pet cemetary?',
+                C: 'Will I get a disease from sleeping in the backyard?',
+                D: 'My dog died... will I be ok?'
             },
-            correct: 'A',
+            correct: 'B',
             wasSolved: false
         },
         {
-            answer: 'This is the third animals answer.',
+            answer: 'Yes very true. Make sure to keep all dead people in your home away from your cat.',
             questions: {
-                A: 'Option A',
-                B: 'Option B',
-                C: 'Option C',
-                D: 'Option D'
+                A: 'Is it true cats eat your dead body and dogs DON\'T?',
+                B: 'Do cats get diseases from dead people?',
+                C: 'Is it possible a dead person can kill my cat?',
+                D: 'Do cats love dead people as much as alive people?'
             },
-            correct: 'A',
+            correct: 'C',
             wasSolved: false
         },
         {
-            answer: 'This is the fourth animals answer.',
+            answer: 'It\'s quite possible that he got the clap from a girl. He might be sexually active.',
             questions: {
-                A: 'Option A',
-                B: 'Option B',
-                C: 'Option C',
-                D: 'Option D'
+                A: 'STD from Dog is it possible? help...?',
+                B: 'My son is avoiding me and I don\'t know what to do. help...?',
+                C: 'Is it possible my cat is involved with my brother?',
+                D: 'Are your pets sexually active?'
             },
             correct: 'A',
             wasSolved: false
