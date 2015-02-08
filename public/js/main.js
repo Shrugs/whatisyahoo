@@ -24,10 +24,15 @@ $(document).ready(function() {
         }
     }
 
-    function showBuzzer() {
+    function showBuzzer(enabled) {
         $('#view--gameboard').hide();
         $('#view--question').hide();
         $('#view--buzzer').show();
+
+        if(enabled)
+            $('.buzzer').removeClass('buzzer--disabled');
+        else
+            $('.buzzer').addCLass('buzzer--disabled');
     }
 
 
@@ -44,10 +49,10 @@ $(document).ready(function() {
         var thisAnswer = $('.gameboard__cell[data-col="' + col + '"]')[i];
         $(thisAnswer).addClass('gameboard__cell--empty').html('');
 
-        showBuzzer();
+        showBuzzer(true);
     });
 
-    $('#buzzer').on('click', function(e) {
+    $('.buzzer').on('click', function(e) {
         socket.emit('buzz in');
         e.preventDefault();
     });
@@ -72,7 +77,7 @@ $(document).ready(function() {
     });
     socket.on('wrong answer', function(data) {
         // wrong answer, go back to buzzer
-        showBuzzer();
+        showBuzzer(false);
     });
     socket.on('correct answer', function(data) {
         showGameboard();
