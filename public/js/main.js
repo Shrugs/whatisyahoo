@@ -49,29 +49,36 @@ $(document).ready(function() {
 
     $('#buzzer').on('click', function(e) {
         socket.emit('buzz in');
-        showQuestions();
         e.preventDefault();
     });
 
 
     $('.question__confirm').on('click', function() {
-
+        var that = $(this);
+        socket.emit('choose question', {
+            key: that.attr('id')
+        });
     });
 
     socket.on('buzz in', function(data) {
-      console.log(data);
+        if (data.allowed) {
+            showQuestions();
+        }
     });
-    socket.on('choose question', function(data) {
-      console.log(data);
+    socket.on('choose question', function(state) {
+        if (state.state === 0) {
+            showGameboard();
+        }
     });
     socket.on('wrong answer', function(data) {
-      console.log('WRONG ANSWER');
+        // wrong answer, go back to buzzer
+        showBuzzer();
     });
     socket.on('correct answer', function(data) {
-      console.log('CORRECT ANSWER');
+        showGameboard();
     });
     socket.on('buzzed in', function(data) {
-      console.log(data);
+        console.log(data);
     });
 
     $('.gameboard__button').on('click', function() {

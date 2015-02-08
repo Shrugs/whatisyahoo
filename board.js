@@ -94,9 +94,9 @@ module.exports = {
             wasSolved: false
         }
     ],
-    pop: [
+    random: [
         {
-            answer: 'This is the first pop music answer.',
+            answer: 'This is the first random music answer.',
             questions: {
                 A: 'Option A',
                 B: 'Option B',
@@ -107,7 +107,7 @@ module.exports = {
             wasSolved: false
         },
         {
-            answer: 'This is the second pop music answer.',
+            answer: 'This is the second random music answer.',
             questions: {
                 A: 'Option A',
                 B: 'Option B',
@@ -118,7 +118,7 @@ module.exports = {
             wasSolved: false
         },
         {
-            answer: 'This is the third pop music answer.',
+            answer: 'This is the third random music answer.',
             questions: {
                 A: 'Option A',
                 B: 'Option B',
@@ -129,7 +129,7 @@ module.exports = {
             wasSolved: false
         },
         {
-            answer: 'This is the fourth pop music answer.',
+            answer: 'This is the fourth random music answer.',
             questions: {
                 A: 'Option A',
                 B: 'Option B',
