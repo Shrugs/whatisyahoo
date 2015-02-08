@@ -3,7 +3,7 @@ var io;
 
 
 // CONSTS
-var ANSWER_TIMER = 15000; // 15 seconds to answer
+var ANSWER_TIMER = 1500000; // 15 seconds to answer
 
 // GAME STATE
 var users = [];

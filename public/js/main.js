@@ -18,7 +18,7 @@ $(document).ready(function() {
         $('#view--question').show();
         $('#view--buzzer').hide();
 
-        $('.card__text').text(answer.answer);
+        $('.card').text(answer.answer);
         for (var k in answer.questions) {
             $('#' + k).text(answer.questions[k]);
         }
