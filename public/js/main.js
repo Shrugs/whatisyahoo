@@ -29,6 +29,8 @@ $(document).ready(function() {
         $('#view--question').hide();
         $('#view--buzzer').show();
 
+        $('.card__text').text(answer.answer);
+
         if(enabled)
             $('.buzzer').removeClass('buzzer--disabled');
         else
