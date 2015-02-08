@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "korinna";
+  src: url("../font/korinna_bold-webfont.eot");
+  src: url("../font/korinna_bold-webfont.eot?#iefix") format("embedded-opentype"), url("../font/korinna_bold-webfont.woff2") format("woff2"), url("../font/korinna_bold-webfont.woff") format("woff"), url("../font/korinna_bold-webfont.ttf") format("truetype"), url("../font/korinna_bold-webfont.svg#korinnabold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+body, html {
+  height: 100%; }
+
+body {
+  background: #f2ecfd;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px; }
+
+.centered {
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0; }
+
+[id^="view"] {
+  text-align: center;
+  height: 100%; }
+
+.gameboard {
+  width: 100%;
+  height: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background: #021070;
+  border: 2px solid black; }
+  .gameboard__cell {
+    border: 4px solid black; }
+    .gameboard__cell--empty {
+      background: rgba(0, 0, 0, 0.25); }
+      .gameboard__cell--empty:before {
+        font-size: 2.8em;
+        content: "$$$";
+        visibility: hidden; }
+    .gameboard__cell--header {
+      color: white;
+      font-size: 1.8em;
+      text-transform: uppercase; }
+  .gameboard__button {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    color: #d69f4c;
+    background: none;
+    font-family: Impact;
+    font-size: 2.8em;
+    text-shadow: 1px 1px black, 2px 2px black, 3px 3px black;
+    -moz-transition: all 0.3s cubic-bezier(0.4, 0.2, 0.25, 1);
+    -o-transition: all 0.3s cubic-bezier(0.4, 0.2, 0.25, 1);
+    -webkit-transition: all 0.3s cubic-bezier(0.4, 0.2, 0.25, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0.2, 0.25, 1); }
+    .gameboard__button:hover {
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer; }
+
+.btn {
+  background: #691ce7;
+  color: white;
+  border: 0;
+  box-shadow: 0 4px #3f0f8e;
+  padding: 0.8em;
+  border-radius: 5px; }
+  .btn:hover {
+    background: #3f0f8e;
+    box-shadow: 0 4px #160532; }
+  .btn--large {
+    font-size: 1em; }
+
+.question {
+  display: block; }
+  .question__title {
+    font-weight: 100;
+    font-size: 2.4em;
+    margin: 16px; }
+  .question__answer {
+    margin: 1em 0; }
+    .question__answers {
+      list-style-type: none;
+      padding: 0;
+      margin: 0; }

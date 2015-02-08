@@ -1,0 +1,199 @@
+//*
+
+views
+    board
+    board + leaderboard
+    clue
+    player buzz
+    player answer
+
+*//
+
+$purple: #3F0F8E
+$masterPadding: 0.8em
+
+@font-face
+    font-family: 'korinna'
+    src: url('../font/korinna_bold-webfont.eot')
+    src: url('../font/korinna_bold-webfont.eot?#iefix') format('embedded-opentype'), url('../font/korinna_bold-webfont.woff2') format('woff2'), url('../font/korinna_bold-webfont.woff') format('woff'), url('../font/korinna_bold-webfont.ttf') format('truetype'), url('../font/korinna_bold-webfont.svg#korinnabold') format('svg')
+    font-weight: bold
+    font-style: normal
+
+body, html
+    height: 100%
+
+body
+    background: lighten($purple, 65%)
+    margin: 0
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+    font-size: 16px
+
+@mixin transition($duration:0.3s)
+    -moz-transition: all $duration cubic-bezier(0.4, 0.2, 0.25, 1)
+    -o-transition: all $duration cubic-bezier(0.4, 0.2, 0.25, 1)
+    -webkit-transition: all $duration cubic-bezier(0.4, 0.2, 0.25, 1)
+    transition: all $duration cubic-bezier(0.4, 0.2, 0.25, 1)
+
+.centered
+    position: absolute
+    margin: auto
+    bottom: 0
+    right: 0
+    left: 0
+    top: 0
+
+//.player
+    text-align: center
+    height: 220px
+
+
+//.buzzer
+    $color: $purple
+    $darkcolor: darken($color, 10%)
+    background-color: $color
+    background-image: -webkit-radial-gradient(center, ellipse cover, $color 0%, $darkcolor 100%)
+    background-image: radial-gradient(ellipse at center, $color 0%, $darkcolor 100%)
+    font-size: 60px
+    width: 320px
+    height: 320px - 100px
+    border-radius: 100%
+    border: 0
+    box-shadow: 0 10px $darkcolor, 0 20px $darkcolor, 0 30px $darkcolor
+    position: relative
+    outline: none
+
+    &:hover
+        background: lighten($color, 10%)
+        top: 5px
+        box-shadow: 0 12px $color, 0 25px $color
+
+        .buzzer__text
+            color: #fff
+
+    &:active
+        top: 10px
+        box-shadow: 0 10px $color, 0 20px $color
+
+    &__text
+        color: #eee
+        text-shadow: 0 2px #900
+        display: block
+        text-transform: uppercase
+        -webkit-transform: scaleY(0.8)
+        transform: scaleY(0.8)
+
+// .card
+
+    display: none
+
+    font-family: 'korinna'
+    font-weight: bold
+    text-transform: uppercase
+    width: 100%
+    height: 100%
+    background: #051175
+    color: #fff
+    text-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000, 4px 4px #000
+    font-size: 3em
+
+    &__text
+        position: relative
+        top: 50%
+        -webkit-transform: translateY(-50%)
+        -ms-transform: translateY(-50%)
+        transform: translateY(-50%)
+
+[id^="view"]
+    text-align: center
+    height: 100%
+
+.gameboard
+    width: 100%
+    height: 100%
+    border-spacing: 0
+    border-collapse: collapse
+    table-layout: fixed
+    background: #021070
+    border: 2px solid #000
+
+    &__cell
+        border: 4px solid #000
+
+        &--empty
+            background: rgba(0,0,0,0.25)
+
+            // Hacky crap WHATEVER
+            &:before
+                font-size: 2.8em
+                content: '$$$'
+                visibility: hidden
+
+        &--header
+            color: #fff
+            font-size: 1.8em
+            text-transform: uppercase
+
+    &__button
+        width: 100%
+        height: 100%
+        border: 0
+        margin: 0
+        padding: 0
+        color: #D69F4C
+        background: none
+        font-family: Impact
+        font-size: 2.8em
+        text-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000
+        @include transition
+
+        &:hover
+            background: rgba(255,255,255,0.2)
+            cursor: pointer
+
+
+// td a
+        display: block
+        position: relative
+        height: 100%
+        text-align: center
+        text-decoration: none
+
+
+        span
+            @extend .centered
+            top: -6px
+            height: 1em
+
+
+.btn
+    background: lighten($purple, 20%)
+    color: #fff
+    border: 0
+    box-shadow: 0 4px $purple
+    padding: $masterPadding
+    border-radius: 5px
+
+    &:hover
+        background: $purple
+        box-shadow: 0 4px darken($purple, 20%)
+
+    &--large
+        font-size: 1em
+
+.question
+
+    //
+    display: none
+    
+    &__title
+        font-weight: 100
+        font-size: 2.4em
+        margin: 16px
+
+    &__answer
+        margin: 1em 0
+
+        &s
+            list-style-type: none
+            padding: 0
+            margin: 0
