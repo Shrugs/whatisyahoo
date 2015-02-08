@@ -64,6 +64,7 @@ body {
   padding: 2em 1em;
   background: #051175;
   color: white;
+  word-wrap: break-word;
   text-shadow: 1px 1px black, 2px 2px black, 3px 3px black, 4px 4px black;
   font-size: 2em; }
 
