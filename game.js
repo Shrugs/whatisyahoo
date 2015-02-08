@@ -113,9 +113,14 @@ module.exports = {
                 peopleAllowedToBuzzIn += user.canQuestion ? 1 : 0;
             });
 
-            debugger;
+            isAllowedToBuzz = true;
+            isAllowedToBuzz = !(state.state === STATE_BUZZED_IN || !user.canQuestion);
+            if (!isAllowedToBuzz) {
+                // if nobody can buzz in, allow anyone
+                isAllowedToBuzz = peopleAllowedToBuzzIn === 0;
+            }
 
-            if (state.state === STATE_BUZZED_IN || (!user.canQuestion) ) {
+            if (!isAllowedToBuzz) {
                 // if someone has already buzzed in, don't do anything
                 // or they already tried to answer
                 io.to(user.socket.id).emit('buzz in', {

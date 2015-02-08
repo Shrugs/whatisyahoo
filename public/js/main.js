@@ -32,7 +32,7 @@ $(document).ready(function() {
         if(enabled)
             $('.buzzer').removeClass('buzzer--disabled');
         else
-            $('.buzzer').addCLass('buzzer--disabled');
+            $('.buzzer').addClass('buzzer--disabled');
     }
 
 
