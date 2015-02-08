@@ -1,7 +1,7 @@
 // board is an array of questions and answers
 // each q/a object has an 'wasSolved' prop
 module.exports = {
-    computers: [
+    random1: [
         {
             answer: 'This is the first computers answer.',
             questions: {
@@ -48,7 +48,7 @@ module.exports = {
         }
 
     ],
-    history: [
+    random2: [
         {
             answer: 'This is the first history answer.',
             questions: {
@@ -94,7 +94,7 @@ module.exports = {
             wasSolved: false
         }
     ],
-    random: [
+    random3: [
         {
             answer: 'This is the first random answer.',
             questions: {
@@ -140,7 +140,7 @@ module.exports = {
             wasSolved: false
         }
     ],
-    animals: [
+    random4: [
         {
             answer: 'This is the first animals answer.',
             questions: {
