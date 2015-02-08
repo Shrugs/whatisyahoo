@@ -73,6 +73,8 @@ module.exports = {
             state.currentUser = users[0];
         }
         this.sendUsers();
+        board = require('./board');
+        resetToState(STATE_DEFAULT);
     },
     removeUser: function(socket) {
         users = _.without(users, _.findWhere(users, {id: socket.id}));

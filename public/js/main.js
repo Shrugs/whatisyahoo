@@ -29,6 +29,8 @@ $(document).ready(function() {
         $('#view--question').hide();
         $('#view--buzzer').show();
 
+        $('.card__text').text(answer.answer);
+
         if(enabled)
             $('.buzzer').removeClass('buzzer--disabled');
         else
@@ -39,7 +41,9 @@ $(document).ready(function() {
     var socket = io();
 
     socket.on('choose answer', function(state) {
-
+        if (state === null) {
+            return;
+        }
         answer = state.answer;
         console.log(state);
         // someone chose an answer, so flip that card over
