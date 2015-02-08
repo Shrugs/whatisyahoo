@@ -9,14 +9,14 @@ $(document).ready(function() {
 
     function showGameboard() {
         $('#view--gameboard').show();
-        $('#question-view').hide();
-        $('#buzzer-view').hide();
+        $('#view--question').hide();
+        $('#view--buzzer').hide();
     }
 
     function showQuestions() {
         $('#view--gameboard').hide();
-        $('#question-view').show();
-        $('#buzzer-view').hide();
+        $('#view--question').show();
+        $('#view--buzzer').hide();
 
         $('.card__text').text(answer.answer);
         for (var k in answer.questions) {
@@ -26,8 +26,8 @@ $(document).ready(function() {
 
     function showBuzzer() {
         $('#view--gameboard').hide();
-        $('#question-view').hide();
-        $('#buzzer-view').show();
+        $('#view--question').hide();
+        $('#view--buzzer').show();
     }
 
 
